@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Validation on Edit Form">
+       <lightning-record-edit-form object-api-name={objectName} 
+                                    onsubmit={handleSubmit}
+                                     onsuccess={handleSuccess}
+                                     onerror={handleError}>
+
+         <lightning-input label="Name" value={inputValue} onkeyup={handleChange} class="slds-m-bottom_x-small"></lightning-input>
+
+         <lightning-button type="submit" label="Create Account" class="slds-m-top_small"></lightning-button>
+       </lightning-record-edit-form>
+    </lightning-card>
+</template>

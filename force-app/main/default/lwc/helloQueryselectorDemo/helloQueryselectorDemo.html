@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Query Selector">
+        <div class="slds-var-m-around_medium">
+            
+            <h1>Hey I Am heading</h1>
+            
+            <template for:each={userNames} for:item="user">
+                <div key={user} class="name">{user}</div>
+            </template>
+            
+              <div class="child" lwc:dom="manual"></div>
+
+            <button onclick={fetchdetailhandler}>fetch details</button>
+        </div>
+    </lightning-card>
+</template>

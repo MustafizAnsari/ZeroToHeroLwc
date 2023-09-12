@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Image Uploader">
+        <div class="slds-m-around_medium">
+            <lightning-input type="file" label="Upload Images" multiple accept="image/*" onchange={handleFileUpload}></lightning-input>
+        </div>
+        <template for:each={filePreviews} for:item="file" for:index="index">
+            <div key={file.id} class="slds-m-around_medium">
+                <lightning-card variant="Narrow" title={file.name}>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                            <img src={file.url} alt={file.name} style="max-width: 100%"></img>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-3">
+                            <div class="slds-text-align_right">
+                                <lightning-button variant="neutral" label="Preview" title="Preview" value={index} onclick={handlePreview}></lightning-button>
+                                <lightning-button variant="destructive" label="Delete" title="Delete" value={index} onclick={handleDelete}></lightning-button>
+                            </div>
+                        </div>
+                    </div>
+                </lightning-card>
+            </div>
+        </template>
+        <div class="slds-m-around_medium">
+            <template if:true={selectedImage}>
+                <h3>Preview</h3>
+                <div class="slds-m-top_medium">
+                    <img src={selectedImage} alt="Preview" style="max-width: 100%"></img>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

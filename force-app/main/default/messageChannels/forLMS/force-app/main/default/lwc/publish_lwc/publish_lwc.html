@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Account List LMS">
+           <p class="slds-p-horizontal_small">
+               <template for:each={accountList} for:item="account">
+                   <div key={account.id}>
+                       <a href="#" data-value={account.id} onclick={handleClick}>{account.Name}</a>
+                   </div>
+               </template>
+           </p>
+    </lightning-card>
+</template>

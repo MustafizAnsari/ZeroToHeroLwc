@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadeta">
+
+            <masterLabel>SampleMessageChannel</masterLabel>
+            <isExposed>true</isExposed>
+            <description>This is Sample Lightning Message Channel</description>
+    
+    <lightningMessageFields>
+           <fieldName>recordId</fieldName>
+           <description>This is record id that changed</description>
+    </lightningMessageFields>
+
+    <lightningMessageFields>
+            <fieldName>recordData</fieldName>
+            <description>the current Data representing the record that changed</description>
+    </lightningMessageFields>
+    
+</LightningMessageChannel>
+<!-- First Create folder, name messgaeChannel in default directory
+     In that folder create file, with extention .messageChannel-meta.xml 
+     write lightningMessageFields With fieldName And description-->

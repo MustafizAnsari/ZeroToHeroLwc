@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shadow DOM</title>
+        <style>
+            p{
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>Thanx For Choosing Zero To hero</p>
+        </div>
+        <div id="host"> </div>
+
+        <script>
+            const elem =document.querySelector('#host')
+             const shadowroot = elem.attachShadow({mode:'open'})
+             shadowroot.innerHTML = '<p>I am Shadow DOM</p>'
+        </script>
+    </body>
+</html>

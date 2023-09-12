@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Create Opportunity">
+     <div class="slds-p-around_medium">
+       <lightning-record-edit-form object-api-name="Opportunity" onsubmit={handleSubmit} onsuccess={handleSuccess}>
+          <template for:each={fields} for:item="field">
+             <div key={field.APIName}>
+              <lightning-input-field field-name={field.APIName} name={field.APIName} value={value}></lightning-input-field>
+             </div>
+          </template>
+           <div class="slds-clearfix">
+             <div class="slds-float_right slds-m-top_x-small">
+                <lightning-button label="Save" variant="brand" type="submit" class="slds-m-around_x-small"></lightning-button>
+                <lightning-button label="Cancel" variant="neutral" onclick={handleCancel} class="slds-m-around_x-small"></lightning-button>
+             </div>
+             </div>
+           </lightning-record-edit-form>
+         </div>
+    </lightning-card>
+</template>

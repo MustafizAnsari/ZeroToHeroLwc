@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Recent Accounts">
+         <div class="slds-m-around_medium">
+           <template for:each={recentAccounts} for:item="account">
+              <li key={account.Id}>{account.Name}</li>
+           </template>
+        </div>
+    </lightning-card>
+</template>

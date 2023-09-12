@@ -1,0 +1,19 @@
+p
+{
+    color:green;
+    font-size:20px;
+    border: 1px,solid,red;
+    background-color: var(--lwc-colorBackgroundHighlight);     /* by using Token. without hardcoding color */
+}
+
+.user
+{
+    color: palevioletred;
+    font-size: 20px;
+}
+
+.user:hover
+{
+    color: red;
+    font-size: 50px;
+}
