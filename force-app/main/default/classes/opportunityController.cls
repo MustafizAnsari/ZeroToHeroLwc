@@ -9,4 +9,5 @@ public with sharing class opportunityController
      return [SELECT Id,Name,Amount FROM opportunity WHERE CreatedDate >=  :Today AND Amount >= :amountThereShold];
    }
    
+   
 }

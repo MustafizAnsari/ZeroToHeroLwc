@@ -21,6 +21,7 @@ export default class OpportunityDataTable extends LightningElement
           this.opportunities = data;
 
     }else if(error){
+        
         console.error(error);
     }
    }
